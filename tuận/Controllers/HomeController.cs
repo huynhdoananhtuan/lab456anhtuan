@@ -12,7 +12,7 @@ namespace tuận.Controllers
     {
         private ApplicationDbContext _dbContext;
 
-        public object Lecturer { get; private set; }
+        
 
         public HomeController()
         {
@@ -21,7 +21,7 @@ namespace tuận.Controllers
         public ActionResult Index()
         {
             var upcommingCourses = _dbContext.Courses
-               .Include(c => Lecturer)
+               .Include(c => c.Lecturer)
                .Include(c => c.Category)
                .Where(c => c.DateTime > DateTime.Now);
 
