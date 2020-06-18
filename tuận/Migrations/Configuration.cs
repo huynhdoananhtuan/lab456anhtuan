@@ -12,6 +12,8 @@ namespace tuận.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
+
+
         protected override void Seed(tuận.Models.ApplicationDbContext context)
         {
             //  This method will be called after migrating to the latest version.
